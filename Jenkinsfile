@@ -48,7 +48,8 @@ pipeline {
                 //sh "kubectl apply -f train-schedule-kube.yml "
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
-                    configs: 'train-schedule-kube.yml',
+                    //configs: 'train-schedule-kube.yml',
+                    configs: 'pod.yml',
                     enableConfigSubstitution: true
                 )
             }
